@@ -1,0 +1,396 @@
+@import "./colors";
+@import "./media";
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Montserrat", "sans-serif";
+	font-size: 1.6rem;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+.underline {
+	height: 6px;
+	width: 75px;
+	margin: 0.5em 0 2.5em;
+	background-color: $main-color;
+}
+
+.section-heading {
+	font-size: 3rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: $dark;
+}
+
+.btn {
+	padding: 1em;
+	max-width: 275px;
+	color: $light;
+	font-weight: bold;
+	background-color: $main-color;
+	text-transform: uppercase;
+	font-size: 1.8rem;
+	border-radius: 50px;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $dark-violet;
+		color: $light;
+	}
+}
+
+//NAV
+.nav {
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+	padding: 1.5em;
+	background-color: rgba(0, 0, 0, 0.6);
+	.wrapper {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__items {
+		color: $light;
+		text-decoration: none;
+		padding: 1em;
+		text-transform: uppercase;
+
+		&:hover {
+			color: $main-color;
+		}
+	}
+	&__logo {
+		width: 250px;
+		//dodać mu hover
+	}
+}
+
+//HEADER
+.header {
+	color: $light;
+	overflow: hidden;
+	height: 100vh;
+	&__img {
+		background-image: url("../img/hero-img-lg.jpg");
+		z-index: 0;
+		background-position: center;
+		background-size: cover;
+	}
+
+	&__container {
+		// padding: 30em 1em 0 37em;
+		display: flex;
+		flex-direction: column;
+		padding-top: 45vh;
+		margin-left: 25%;
+		// justify-content: center;
+		align-items: flex-start;
+	}
+
+	&__title {
+		font-size: 4rem;
+		font-weight: bold;
+	}
+
+	&__text {
+		margin: 1em 0;
+	}
+
+	&__btn {
+		margin-right: 1em;
+		background: none;
+		border: 3px solid $main-color;
+
+		&:hover {
+			background-color: $main-color;
+			color: $dark;
+		}
+	}
+
+	&__shadow {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.4);
+		z-index: -1;
+	}
+}
+
+//ABOUT US
+
+.aboutus {
+	margin-top: 5em;
+	padding: 2em;
+
+	&__container {
+		margin: 5em 1em;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		// max-width: 15em;
+	}
+
+	&__icon {
+		font-size: 5rem;
+		color: $dark-violet;
+	}
+
+	&__heading {
+		font-size: 2.5rem;
+		color: $light-violet;
+		margin: 1em 0;
+	}
+	&__items {
+		display: flex;
+		justify-content: space-around;
+	}
+}
+
+//MENU
+.menu {
+	padding: 5em;
+	background-color: $dark-violet;
+
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	&__item {
+		width: 350px;
+		display: flex;
+		flex-direction: column;
+		margin: 0.5em;
+		background-color: $light-violet;
+		padding: 1.5em;
+		align-items: center;
+
+		&-heading {
+			font-size: 2.6rem;
+			font-weight: bold;
+			margin: 1em 0;
+			text-transform: uppercase;
+		}
+
+		&-img-container {
+			position: relative;
+			height: 230px;
+			width: 300px;
+			overflow: hidden;
+		}
+
+		&-img {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			height: 100%;
+			transition: transform 0.3s;
+
+			&:hover {
+				transform: scale(1.2);
+			}
+		}
+
+		&-btn {
+			margin: 0em;
+			font-size: 1.4rem;
+		}
+	}
+	.section-heading {
+		color: $light;
+	}
+}
+
+//EVENTS
+
+.events {
+	background-color: $light-violet;
+	padding: 5em 0;
+}
+
+.carousel {
+	&__container {
+		display: flex;
+		background-color: $light;
+		width: 100%;
+		height: 450px;
+
+		&-text {
+			padding: 2em;
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	&__heading {
+		font-size: 2.4rem;
+		font-weight: bold;
+		margin: 1em 0;
+	}
+
+	&__btn {
+		margin: 2em 0 0;
+		align-self: flex-end;
+	}
+}
+
+// .carousel-control-next, .carousel-control-prev{
+// 	color: $main-color;
+
+// // } te strzłki są niewidoczne
+//button ma być po prawej
+
+//KONTAKT
+
+.contact {
+	margin-top: 5em;
+
+	&__heading {
+		font-size: 2.8rem;
+		font-weight: bold;
+		color: $light-violet;
+	}
+
+	&__text {
+		margin: 1em 0 3em;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-size: 1.8rem;
+		margin-bottom: 2em;
+
+		&-top {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+
+			justify-content: space-between;
+			width: 600px;
+			&-line {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+
+		&-down {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&-label {
+			margin-bottom: 0.5em;
+		}
+
+		&-input {
+			padding: 0.6em 1.2em;
+			background-color: $gray;
+			border: none;
+			border-radius: 0.5em;
+			width: 295px;
+			margin-bottom: 0.5em;
+		}
+
+		&-textarea {
+			padding: 0.4em 0.8em;
+			background-color: $gray;
+			border: none;
+			border-radius: 0.5em;
+			width: 600px;
+			min-height: 150px;
+		}
+
+		&-btn {
+			margin: 2em 0 0;
+			align-self: flex-end;
+			width: 8em;
+		}
+	}
+	&__info {
+		display: flex;
+		justify-content: space-between;
+
+		&-container {
+			margin: 5em 1em;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&-icon {
+			font-size: 5rem;
+			color: $dark-violet;
+		}
+
+		&-heading {
+			font-size: 2.5rem;
+			color: $light-violet;
+			margin: 1em 0;
+		}
+	}
+
+	&__social-media {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		&-heading {
+			font-size: 2.8rem;
+			font-weight: bold;
+			color: $light-violet;
+			margin-bottom: 1em;
+		}
+
+		&-container {
+			display: flex;
+			justify-content: space-between;
+			width: 15em;
+			margin-bottom: 3em;
+			&-icon {
+				font-size: 6rem;
+				color: $dark-violet;
+				cursor: pointer;
+
+				&:hover {
+					color: $main-color;
+				}
+			}
+		}
+	}
+}
+
+//FOOTER
+
+.footer {
+	background-color: $light-violet;
+	padding: 2em;
+	text-align: center;
+
+	&__text {
+		font-size: 2.5rem;
+		color: $light;
+	}
+}
+
+//zrobił mi się dodatkowy margines na dole, coś było jak to naprawić, ale nie pamiętam co
