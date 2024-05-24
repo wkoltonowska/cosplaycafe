@@ -52,6 +52,22 @@ body {
 	}
 }
 
+.input-style {
+	padding: 0.6em 1.2em;
+	background-color: $gray;
+	border: none;
+	border-radius: 0.5em;
+	width: 100%;
+	margin-bottom: 0.5em;
+}
+
+::-webkit-calendar-picker-indicator {
+	cursor: pointer;
+	// background-color: $light-violet;
+	padding: 5px;
+	border-radius: 3px;
+}
+
 //NAV
 .nav {
 	position: fixed;
@@ -195,6 +211,7 @@ body {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		max-width: 350px;
 	}
 
 	&__icon {
@@ -209,9 +226,11 @@ body {
 	}
 	&__items {
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-between;
 		flex-direction: column;
+		align-items: flex-start;
 		width: 100%;
+		text-align: center;
 	}
 }
 
@@ -237,37 +256,48 @@ body {
 		align-items: center;
 
 		&-heading {
-			font-size: 2.6rem;
+			margin: 1em 0 0.2em;
+			font-size: 2.8rem;
 			font-weight: bold;
-			margin: 1em 0;
 			text-transform: uppercase;
+			color: $light;
 		}
 
 		&-img-container {
-			// position: relative;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			height: 280px;
 			width: 250px;
 			overflow: hidden;
+			z-index: 0;
 		}
 
 		&-img {
-			// position: absolute;
-			// right: 0;
-			// bottom: 0;
 			height: 100%;
 			transition: transform 0.3s;
-
 			&:hover {
 				transform: scale(1.2);
 			}
 		}
 
-		&-btn {
-			margin: 0em;
+		&-text {
+			font-size: 1.8rem;
+			color: $light;
+		}
+
+		&-product {
+			color: $dark;
 			font-size: 1.4rem;
+		}
+
+		&-price {
+			margin-top: 1em;
+			padding: 0.5em 0.7em;
+			align-self: flex-end;
+			background-color: $main-color;
+			font-weight: bold;
+			// border-radius: 50px;
 		}
 	}
 	.section__heading {
@@ -282,34 +312,34 @@ body {
 	padding: 5em 2em;
 }
 
-.carousel {
-	&__container {
-		display: flex;
-		background-color: $light;
-		flex-direction: column;
+// .carousel {
+// 	&__container {
+// 		display: flex;
+// 		background-color: $light;
+// 		flex-direction: column;
 
-		&-text {
-			padding: 2em;
-			display: flex;
-			flex-direction: column;
-		}
-		&-img {
-			aspect-ratio: 1;
-			object-fit: cover;
-			object-position: top;
-		}
-	}
-	&__heading {
-		font-size: 2.4rem;
-		font-weight: bold;
-		margin: 1em 0;
-	}
+// 		&-text {
+// 			padding: 2em;
+// 			display: flex;
+// 			flex-direction: column;
+// 		}
+// 		&-img {
+// 			aspect-ratio: 1;
+// 			object-fit: cover;
+// 			object-position: top;
+// 		}
+// 	}
+// 	&__heading {
+// 		font-size: 2.4rem;
+// 		font-weight: bold;
+// 		margin: 1em 0;
+// 	}
 
-	&__btn {
-		margin: 2em 0 0;
-		align-self: flex-end;
-	}
-}
+// 	&__btn {
+// 		margin: 2em 0 0;
+// 		align-self: flex-end;
+// 	}
+// }
 
 //KONTAKT
 
@@ -384,14 +414,15 @@ body {
 	&__info {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: space-around;
 		text-align: center;
+		align-items: center;
 
 		&-container {
 			margin: 1em;
 			display: flex;
 			flex-direction: column;
-			align-items: center;
+			width: 300px;
 		}
 
 		&-icon {
@@ -446,12 +477,50 @@ body {
 	text-align: center;
 
 	&__text {
+		margin: 0;
 		font-size: 2.5rem;
 		color: $light;
 	}
 }
 
 //zrobił mi się dodatkowy margines na dole, coś było jak to naprawić, ale nie pamiętam co
+
+//RESERVATION
+
+.reservations {
+	margin: 2em 0;
+	padding: 0 2em;
+	form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1em;
+		font-size: 1.8rem;
+
+		&__section {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			justify-content: space-between;
+			flex-direction: column;
+			width: 300px;
+		}
+
+		.reservations-form__item {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+
+			&-label {
+				font-weight: bold;
+				color: $dark-violet;
+				margin-bottom: 0.5em;
+				font-size: 2rem;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
 
 @media (min-width: 390px) {
 	.header {
@@ -506,22 +575,22 @@ body {
 			}
 		}
 	}
-	.carousel {
-		&__container {
-			flex-direction: row;
-		}
+	// .carousel {
+	// 	&__container {
+	// 		flex-direction: row;
+	// 	}
 
-		.contact {
-			&__form {
-				&-top {
-					width: 350px;
-				}
-				&-down {
-					width: 350px;
-				}
-			}
-		}
-	}
+	// 	.contact {
+	// 		&__form {
+	// 			&-top {
+	// 				width: 350px;
+	// 			}
+	// 			&-down {
+	// 				width: 350px;
+	// 			}
+	// 		}
+	// 	}
+	// }
 }
 
 @media (min-width: 768px) {
@@ -566,6 +635,7 @@ body {
 
 		&__info {
 			flex-direction: row;
+			align-items: flex-start;
 		}
 	}
 }

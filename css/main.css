@@ -50,6 +50,21 @@ body {
   color: #fff;
 }
 
+.input-style {
+  padding: 0.6em 1.2em;
+  background-color: #ededed;
+  border: none;
+  border-radius: 0.5em;
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 3px;
+}
+
 .nav {
   position: fixed;
   width: 100%;
@@ -176,6 +191,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 350px;
 }
 .aboutus__icon {
   font-size: 5rem;
@@ -188,9 +204,11 @@ body {
 }
 .aboutus__items {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: column;
+  align-items: flex-start;
   width: 100%;
+  text-align: center;
 }
 
 .menu {
@@ -213,10 +231,11 @@ body {
   align-items: center;
 }
 .menu__item-heading {
-  font-size: 2.6rem;
+  margin: 1em 0 0.2em;
+  font-size: 2.8rem;
   font-weight: bold;
-  margin: 1em 0;
   text-transform: uppercase;
+  color: #fff;
 }
 .menu__item-img-container {
   display: flex;
@@ -225,6 +244,7 @@ body {
   height: 280px;
   width: 250px;
   overflow: hidden;
+  z-index: 0;
 }
 .menu__item-img {
   height: 100%;
@@ -233,9 +253,20 @@ body {
 .menu__item-img:hover {
   transform: scale(1.2);
 }
-.menu__item-btn {
-  margin: 0em;
+.menu__item-text {
+  font-size: 1.8rem;
+  color: #fff;
+}
+.menu__item-product {
+  color: #000;
   font-size: 1.4rem;
+}
+.menu__item-price {
+  margin-top: 1em;
+  padding: 0.5em 0.7em;
+  align-self: flex-end;
+  background-color: #f2bc1b;
+  font-weight: bold;
 }
 .menu .section__heading {
   color: #fff;
@@ -244,33 +275,6 @@ body {
 .events {
   background-color: #9896d9;
   padding: 5em 2em;
-}
-
-.carousel__container {
-  display: flex;
-  background-color: #fff;
-  flex-direction: column;
-}
-.carousel__container-text {
-  padding: 2em;
-  display: flex;
-  flex-direction: column;
-}
-.carousel__container-img {
-  aspect-ratio: 1;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
-}
-.carousel__heading {
-  font-size: 2.4rem;
-  font-weight: bold;
-  margin: 1em 0;
-}
-.carousel__btn {
-  margin: 2em 0 0;
-  align-self: flex-end;
 }
 
 .contact {
@@ -336,14 +340,15 @@ body {
 .contact__info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   text-align: center;
+  align-items: center;
 }
 .contact__info-container {
   margin: 1em;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 300px;
 }
 .contact__info-icon {
   font-size: 5rem;
@@ -388,8 +393,41 @@ body {
   text-align: center;
 }
 .footer__text {
+  margin: 0;
   font-size: 2.5rem;
   color: #fff;
+}
+
+.reservations {
+  margin: 2em 0;
+  padding: 0 2em;
+}
+.reservations form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  font-size: 1.8rem;
+}
+.reservations form__section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 300px;
+}
+.reservations form .reservations-form__item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.reservations form .reservations-form__item-label {
+  font-weight: bold;
+  color: #6258a6;
+  margin-bottom: 0.5em;
+  font-size: 2rem;
+  text-transform: uppercase;
 }
 
 @media (min-width: 390px) {
@@ -428,15 +466,6 @@ body {
   .menu__item-img-container {
     width: 400px;
   }
-  .carousel__container {
-    flex-direction: row;
-  }
-  .carousel .contact__form-top {
-    width: 350px;
-  }
-  .carousel .contact__form-down {
-    width: 350px;
-  }
 }
 @media (min-width: 768px) {
   .header__img {
@@ -467,6 +496,7 @@ body {
   }
   .contact__info {
     flex-direction: row;
+    align-items: flex-start;
   }
 }
 @media (min-width: 992px) {

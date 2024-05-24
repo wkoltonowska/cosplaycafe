@@ -39,19 +39,84 @@
     <header class="header header__img">
         <div class="wrapper">
             <div class="header__container">
-                <h1 class="header__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-                <p class="header__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ipsa
-                    praesentium
-                    impedit dolores.</p>
+                <h1 class="header__title">Witamy w CosPlay Café!</h1>
+                <p class="header__text">Chcesz poczuć się jak na konwencie? Zapraszamy do nas!</p>
                 <div class="header__btn-container">
-                    <a href="#menu">
-                        <button class="header__btn btn">Zamów online</button></a>
+                    <!-- <a href="#menu">
+                        <button class="header__btn btn">Zamów online</button></a> -->
                     <a href="rezerwacje.html"><button class="header__btn btn">Zarezerwuj stolik</button></a>
                 </div>
             </div>
         </div>
         <div class="header__shadow"></div>
     </header>
+
+    <section class="reservations" id="rezerwacje">
+        <div class="wrapper">
+            <h2 class="section__heading">Rezerwacje</h2>
+            <div class="underline"></div>
+
+
+            <form class="reservations-form">
+
+                <div class="reservations-form__item">
+                    <label for="name" class="reservations-form__item-label">Imię</label>
+                    <input type="text" class="input-style" id="name">
+                </div>
+                <div class="reservations-form__item">
+                    <label for="surname" class="reservations-form__item-label">Nazwisko</label>
+                    <input type="text" class="input-style" id="surname">
+                </div>
+
+
+                <div class="reservations-form__item">
+                    <label for="email" class="reservations-form__item-label">E-mail</label>
+                    <input type="text" id="email" class="input-style">
+                </div>
+                <div class="reservations-form__item">
+                    <label for="phone" class="reservations-form__item-label">Telefon</label>
+                    <input type="phone" id="phone" class="input-style">
+                </div>
+
+
+                <div class="reservations-form__item">
+                    <label for="table" class="reservations-form__item-label">Liczba osób</label>
+                    <select id="table" class="input-style">
+                        <option value="1">1 osoba</option>
+                        <option value="2">2 osoby</option>
+                        <option value="3">3 osoby</option>
+                        <option value="4">4 osoby</option>
+                        <option value="5">5 osoby</option>
+                    </select>
+                </div>
+                <div class="reservations-form__item">
+                    <label for="table" class="reservations-form__item-label">Wybierz stolik</label>
+                    <select id="table" class="input-style">
+                        <option value="1">Stolik nr 1</option>
+                        <option value="2">Stolik nr 2</option>
+                        <option value="3">Stolik nr 3</option>
+                        <option value="4">Stolik nr 4</option>
+                        <option value="5">Stolik nr 5</option>
+                    </select>
+                </div>
+
+
+                <div class="reservations-form__item">
+                    <label for="hour" class="reservations-form__item-label">Godzina</label>
+                    <input type="time" id="hour" class="input-style">
+                </div>
+                <div class="reservations-form__item">
+                    <label for="date" class="reservations-form__item-label">Data</label>
+                    <input type="date" id="date" class="input-style">
+                </div>
+
+
+                <button class="btn">Wybierz</button>
+            </form>
+
+
+        </div>
+    </section>
 
 
 
