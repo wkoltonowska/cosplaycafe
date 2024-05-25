@@ -411,6 +411,7 @@ body {
 //FOOTER
 
 .footer {
+	width: 100%;
 	background-color: $light-violet;
 	line-height: 0;
 	padding: 2em;
@@ -426,9 +427,8 @@ body {
 //RESERVATION
 
 .reservations {
-	// margin: 2em 0;
-	padding: 8em 2em 4em;
-	height: 100vh;
+	padding: 4em 2em;
+
 }
 
 @media (min-width: 576px) {
