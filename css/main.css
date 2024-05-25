@@ -170,7 +170,7 @@ body {
   background: none;
   border: none;
   font-size: 2rem;
-  padding: 0.1em;
+  padding: 0.5em;
 }
 .nav__container {
   position: fixed;
@@ -194,6 +194,7 @@ body {
   position: absolute;
   top: 24px;
   right: 24px;
+  padding: 0.3em;
   border: none;
   background: none;
   color: white;
