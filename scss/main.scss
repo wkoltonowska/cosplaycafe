@@ -145,39 +145,37 @@ body {
 	position: relative;
 	color: $light;
 	overflow: hidden;
-	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 	&__img {
 		background-image: url("../img/hero-img-sm.jpg");
 		z-index: 0;
 		background-position: center;
 		background-size: cover;
+		height: 100vh;
 	}
 
 	&__container {
-		position: absolute;
-		top: 80px;
-		display: flex;
 		padding: 4em;
-		flex-direction: column;
 		text-align: center;
-		flex-wrap: wrap;
 	}
 
 	&__title {
-		font-size: 1.5em;
+		font-size: 3rem;
 		font-weight: bold;
 	}
 
 	&__text {
-		font-size: 0.9em;
+		font-size: 2rem;
 		margin: 1em 0em 2em;
 	}
 
 	&__btn {
-		font-size: 0.8em;
+		font-size: 1.6rem;
 		background: none;
 		border: 3px solid $main-color;
-		margin: 0.5em;
 
 		&:hover {
 			background-color: $main-color;
@@ -525,38 +523,10 @@ body {
 	}
 }
 
-@media (min-width: 390px) {
-	.header {
-		&__container {
-			top: 100px;
-		}
-
-		&__title {
-			font-size: 3rem;
-		}
-
-		&__text {
-			font-size: 1rem;
-		}
-
-		&__btn {
-			font-size: 1.5rem;
-		}
-	}
-}
-
 @media (min-width: 576px) {
 	.header {
-		&__container {
-			top: 250px;
-		}
-
 		&__title {
-			font-size: 4rem;
-		}
-
-		&__text {
-			font-size: 2rem;
+			font-size: 3.5rem;
 		}
 
 		&__btn {
@@ -584,9 +554,6 @@ body {
 	.header {
 		&__img {
 			background-image: url("../img/hero-img-md.jpg");
-		}
-		&__container {
-			top: 300px;
 		}
 	}
 	.aboutus {
@@ -628,6 +595,11 @@ body {
 }
 
 @media (min-width: 992px) {
+	.header {
+		&__title {
+			font-size: 4rem;
+		}
+	}
 	.nav {
 		&__btn {
 			display: none;
@@ -676,10 +648,7 @@ body {
 		}
 
 		&__container {
-			position: static;
-			padding-top: 45vh;
 			margin-left: 30%;
-			align-items: flex-start;
 			text-align: left;
 		}
 	}
