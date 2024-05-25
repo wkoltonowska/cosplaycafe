@@ -1,4 +1,5 @@
 @use "./colors" as *;
+@use "./components" as *;
 
 * {
 	box-sizing: border-box;
@@ -52,18 +53,8 @@ body {
 	}
 }
 
-.input-style {
-	padding: 0.6em 1.2em;
-	background-color: $gray;
-	border: none;
-	border-radius: 0.5em;
-	width: 100%;
-	margin-bottom: 0.5em;
-}
-
 ::-webkit-calendar-picker-indicator {
 	cursor: pointer;
-	// background-color: $light-violet;
 	padding: 5px;
 	border-radius: 3px;
 }
@@ -307,7 +298,7 @@ body {
 
 .events {
 	background-color: $light-violet;
-	padding: 5em 2em;
+	padding: 5em 3em;
 
 	.carousel-caption {
 		left: 0;
@@ -331,7 +322,7 @@ body {
 		justify-content: center;
 		flex-wrap: wrap;
 		.card {
-			margin: 1em;
+			margin: 1em 0;
 			.card-body {
 				padding: 1.5em;
 				.card-title {
@@ -347,7 +338,7 @@ body {
 
 .contact {
 	margin-top: 5em;
-	padding: 0 2em;
+	padding: 0 3em;
 
 	&__heading {
 		font-size: 2.8rem;
@@ -359,60 +350,6 @@ body {
 		margin: 1em 0 3em;
 	}
 
-	&__form {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		font-size: 1.8rem;
-		margin-bottom: 4em;
-
-		&-top {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			justify-content: space-between;
-			flex-direction: column;
-			width: 300px;
-			&-line {
-				display: flex;
-				flex-direction: column;
-			}
-		}
-
-		&-down {
-			display: flex;
-			flex-direction: column;
-			width: 300px;
-		}
-
-		&-label {
-			margin-bottom: 0.5em;
-		}
-
-		&-input {
-			padding: 0.6em 1.2em;
-			background-color: $gray;
-			border: none;
-			border-radius: 0.5em;
-			width: 100%;
-			margin-bottom: 0.5em;
-		}
-
-		&-textarea {
-			padding: 0.4em 0.8em;
-			background-color: $gray;
-			border: none;
-			border-radius: 0.5em;
-			width: 100%;
-			min-height: 150px;
-		}
-
-		&-btn {
-			margin: 2em 0 0;
-			align-self: flex-end;
-			width: 8em;
-		}
-	}
 	&__info {
 		display: flex;
 		flex-direction: column;
@@ -490,36 +427,6 @@ body {
 .reservations {
 	margin: 2em 0;
 	padding: 0 2em;
-	form {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 1em;
-		font-size: 1.8rem;
-
-		&__section {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			justify-content: space-between;
-			flex-direction: column;
-			width: 300px;
-		}
-
-		.reservations-form__item {
-			display: flex;
-			flex-direction: column;
-			text-align: center;
-
-			&-label {
-				font-weight: bold;
-				color: $dark-violet;
-				margin-bottom: 0.5em;
-				font-size: 2rem;
-				text-transform: uppercase;
-			}
-		}
-	}
 }
 
 @media (min-width: 576px) {
@@ -573,19 +480,6 @@ body {
 	}
 
 	.contact {
-		&__form {
-			&-top {
-				flex-direction: row;
-				width: 600px;
-			}
-			&-down {
-				width: 600px;
-			}
-			&-input {
-				width: 295px;
-			}
-		}
-
 		&__info {
 			flex-direction: row;
 			align-items: flex-start;
@@ -660,5 +554,9 @@ body {
 				width: 285px;
 			}
 		}
+	}
+
+	.events {
+		padding: 5em;
 	}
 }

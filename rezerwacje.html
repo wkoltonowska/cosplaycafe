@@ -57,63 +57,64 @@
             <div class="underline"></div>
 
 
-            <form class="reservations-form">
+            <form class="reservations-form form">
 
-                <div class="reservations-form__item">
-                    <label for="name" class="reservations-form__item-label">Imię</label>
-                    <input type="text" class="input-style" id="name">
-                </div>
-                <div class="reservations-form__item">
-                    <label for="surname" class="reservations-form__item-label">Nazwisko</label>
-                    <input type="text" class="input-style" id="surname">
-                </div>
-
-
-                <div class="reservations-form__item">
-                    <label for="email" class="reservations-form__item-label">E-mail</label>
-                    <input type="text" id="email" class="input-style">
-                </div>
-                <div class="reservations-form__item">
-                    <label for="phone" class="reservations-form__item-label">Telefon</label>
-                    <input type="phone" id="phone" class="input-style">
+                <div class="form__top">
+                    <div class="form__top-line form__top-line--reservation">
+                        <label for="name" class="form__label--reservation">Imię</label>
+                        <input type="text" class="input-style" id="name">
+                    </div>
+                    <div class="form__top-line form__top-line--reservation">
+                        <label for="surname" class="form__label--reservation">Nazwisko</label>
+                        <input type="text" class="input-style" id="surname">
+                    </div>
                 </div>
 
-
-                <div class="reservations-form__item">
-                    <label for="table" class="reservations-form__item-label">Liczba osób</label>
-                    <select id="table" class="input-style">
-                        <option value="1">1 osoba</option>
-                        <option value="2">2 osoby</option>
-                        <option value="3">3 osoby</option>
-                        <option value="4">4 osoby</option>
-                        <option value="5">5 osoby</option>
-                    </select>
+                <div class="form__top">
+                    <div class="form__top-line form__top-line--reservation">
+                        <label for="email" class="form__label--reservation">E-mail</label>
+                        <input type="text" id="email" class="input-style">
+                    </div>
+                    <div class="form__top-line form__top-line--reservation">
+                        <label for="phone" class="form__label--reservation">Telefon</label>
+                        <input type="phone" id="phone" class="input-style">
+                    </div>
                 </div>
-                <div class="reservations-form__item">
-                    <label for="table" class="reservations-form__item-label">Wybierz stolik</label>
-                    <select id="table" class="input-style">
-                        <option value="1">Stolik nr 1</option>
-                        <option value="2">Stolik nr 2</option>
-                        <option value="3">Stolik nr 3</option>
-                        <option value="4">Stolik nr 4</option>
-                        <option value="5">Stolik nr 5</option>
-                    </select>
+                <div class="form__top">
+                    <div class="form__top-line form__top-line--reservation">
+                        <label for="table" class="form__label--reservation">Liczba osób</label>
+                        <select id="table" class="input-style">
+                            <option value="1">1 osoba</option>
+                            <option value="2">2 osoby</option>
+                            <option value="3">3 osoby</option>
+                            <option value="4">4 osoby</option>
+                            <option value="5">5 osoby</option>
+                        </select>
+                    </div>
+                    <div class="form__top-line form__top-line--reservation">
+                        <label for="table" class="form__label--reservation">Wybierz stolik</label>
+                        <select id="table" class="input-style">
+                            <option value="1">Stolik nr 1</option>
+                            <option value="2">Stolik nr 2</option>
+                            <option value="3">Stolik nr 3</option>
+                            <option value="4">Stolik nr 4</option>
+                            <option value="5">Stolik nr 5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form__top">
+                    <div class="form__top-line form__top-line--reservation">
+                        <label for="hour" class="form__label--reservation">Godzina</label>
+                        <input type="time" id="hour" class="input-style">
+                    </div>
+                    <div class="form__top-line form__top-line--reservation">
+                        <label for="date" class="form__label--reservation">Data</label>
+                        <input type="date" id="date" class="input-style">
+                    </div>
                 </div>
 
-
-                <div class="reservations-form__item">
-                    <label for="hour" class="reservations-form__item-label">Godzina</label>
-                    <input type="time" id="hour" class="input-style">
-                </div>
-                <div class="reservations-form__item">
-                    <label for="date" class="reservations-form__item-label">Data</label>
-                    <input type="date" id="date" class="input-style">
-                </div>
-
-
-                <button class="btn">Wybierz</button>
+                <button class="btn form__btn form__btn--reservation">Wybierz</button>
             </form>
-
 
         </div>
     </section>
