@@ -12,6 +12,8 @@ const phone = document.querySelector("#phone");
 const msg = document.querySelector("#msg");
 const formBtn = document.querySelector(".form__btn");
 const formInfo = document.querySelector(".form__info");
+const emailInfo = document.querySelector(".form__info-email");
+const phoneInfo = document.querySelector(".form__info-phone");
 
 navItems.forEach((item) => {
 	item.addEventListener("click", (event) => {
@@ -56,19 +58,66 @@ const scrollToSection = (selector) => {
 };
 
 const checkForm = (input) => {
+	let allFilled = true;
+
 	input.forEach((item) => {
 		if (item.value === "") {
-			formInfo.textContent = "Wszystkie pola muszą zostać wypełnione";
-		} else {
-			formInfo.textContent =
-				"Dziękujemy za przesłanie formularza! Odpowiedź prześlemy na podany adres e-mail";
+			allFilled = false;
 		}
+	});
+
+	if (!allFilled) {
+		formInfo.textContent = "Wszystkie pola muszą zostać wypełnione";
+	} else {
+		clearInput();
+		formInfo.textContent =
+			"Dziękujemy za przesłanie formularza! Odpowiedź prześlemy na podany adres e-mail";
+	}
+};
+
+const checkMail = (mail) => {
+	const re =
+		/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+	if (re.test(mail.value)) {
+		emailInfo.textContent = "";
+		checkAll();
+	} else {
+		formInfo.textContent = "";
+		emailInfo.textContent = "E-mail jest niepoprawny";
+		checkAll();
+	}
+};
+
+const checkPhone = (phone) => {
+	const re = /^(\+48[- ]?)?(\(?\d{3}\)?[- ]?)?\d{3}[- ]?\d{3}[- ]?\d{3}$/;
+
+	if (re.test(phone.value)) {
+		phoneInfo.textContent = "";
+		checkAll();
+	} else {
+		formInfo.textContent = "";
+		phoneInfo.textContent = "Numer telefonu jest niepoprawny";
+		checkAll();
+	}
+};
+
+const checkAll = () => {
+	if (emailInfo.textContent === "" && phoneInfo.textContent === "") {
+		checkForm([name, surname, mail, phone, msg]);
+	}
+};
+
+const clearInput = (input) => {
+	[name, surname, mail, phone, msg].forEach((item) => {
+		item.value = "";
 	});
 };
 
 formBtn.addEventListener("click", (e) => {
 	e.preventDefault();
-	checkForm([name, surname, mail, phone, msg]);
+	checkMail(mail);
+	checkPhone(phone);
 });
 
 navBars.addEventListener("click", showNav);

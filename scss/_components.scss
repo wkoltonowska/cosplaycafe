@@ -80,6 +80,17 @@
 			align-self: center;
 		}
 	}
+
+	&__info-container {
+		text-align: center;
+		margin-bottom: 2em;
+		color: $error;
+		font-weight: bold;
+	}
+
+	&__info {
+		color: $dark-violet;
+	}
 }
 
 @media (min-width: 768px) {
