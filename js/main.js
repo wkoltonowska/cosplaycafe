@@ -5,6 +5,14 @@ const navExit = document.querySelector(".nav__exit");
 const footerYear = document.querySelector(".footer__year");
 let isShowedNav = false;
 
+const name = document.querySelector("#name");
+const surname = document.querySelector("#surname");
+const mail = document.querySelector("#mail");
+const phone = document.querySelector("#phone");
+const msg = document.querySelector("#msg");
+const formBtn = document.querySelector(".form__btn");
+const formInfo = document.querySelector(".form__info");
+
 navItems.forEach((item) => {
 	item.addEventListener("click", (event) => {
 		if (isShowedNav) {
@@ -46,6 +54,22 @@ const scrollToSection = (selector) => {
 
 	console.log(targetDivPosition);
 };
+
+const checkForm = (input) => {
+	input.forEach((item) => {
+		if (item.value === "") {
+			formInfo.textContent = "Wszystkie pola muszą zostać wypełnione";
+		} else {
+			formInfo.textContent =
+				"Dziękujemy za przesłanie formularza! Odpowiedź prześlemy na podany adres e-mail";
+		}
+	});
+};
+
+formBtn.addEventListener("click", (e) => {
+	e.preventDefault();
+	checkForm([name, surname, mail, phone, msg]);
+});
 
 navBars.addEventListener("click", showNav);
 navExit.addEventListener("click", hideNav);

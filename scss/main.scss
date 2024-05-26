@@ -218,7 +218,7 @@ body {
 		display: flex;
 		justify-content: space-between;
 		flex-direction: column;
-		align-items: flex-start;
+		align-items: center;
 		width: 100%;
 		text-align: center;
 	}
@@ -428,7 +428,6 @@ body {
 
 .reservations {
 	padding: 4em 2em;
-
 }
 
 @media (min-width: 576px) {
@@ -467,6 +466,7 @@ body {
 	.aboutus {
 		&__items {
 			flex-direction: row;
+			align-items: flex-start;
 		}
 	}
 
