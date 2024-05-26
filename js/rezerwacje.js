@@ -9,10 +9,13 @@ const name = document.querySelector("#name");
 const surname = document.querySelector("#surname");
 const mail = document.querySelector("#mail");
 const phone = document.querySelector("#phone");
+const hour = document.querySelector("#hour");
+const date = document.querySelector("#date");
 const formBtn = document.querySelector(".form__btn");
 const formInfo = document.querySelector(".form__info");
 const emailInfo = document.querySelector(".form__info-email");
 const phoneInfo = document.querySelector(".form__info-phone");
+const hourInfo = document.querySelector(".form__info-hour");
 
 navItems.forEach((item) => {
 	item.addEventListener("click", (event) => {
@@ -87,8 +90,26 @@ const checkPhone = (phone) => {
 	}
 };
 
+const checkHour = (hour) => {
+	const re = /^(1[2-9]|2[0-2]):00$/;
+
+	if (re.test(hour.value)) {
+		hourInfo.textContent = "";
+		checkAll();
+	} else {
+		formInfo.textContent = "";
+		hourInfo.textContent =
+			"Godzina jest niepoprawna. Przedział godzinowy to 12-22. Można wybrać tylko pełne godziny.";
+		checkAll();
+	}
+};
+
 const checkAll = () => {
-	if (emailInfo.textContent === "" && phoneInfo.textContent === "") {
+	if (
+		emailInfo.textContent === "" &&
+		phoneInfo.textContent === "" &&
+		hourInfo.textContent === ""
+	) {
 		checkForm([name, surname, mail, phone]);
 	}
 };
@@ -103,6 +124,7 @@ formBtn.addEventListener("click", (e) => {
 	e.preventDefault();
 	checkMail(mail);
 	checkPhone(phone);
+	checkHour(hour);
 });
 
 navBars.addEventListener("click", showNav);
