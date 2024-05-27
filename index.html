@@ -12,7 +12,7 @@
     <script src="https://kit.fontawesome.com/3857b0a1bd.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
@@ -39,12 +39,16 @@
     <header class="header header__img">
         <div class="wrapper">
             <div class="header__container">
-                <h1 class="header__title">Witamy w CosPlay Café!</h1>
-                <p class="header__text">Chcesz poczuć się jak na konwencie? Zapraszamy do nas!</p>
+                <h1 class="header__title" data-aos="fade-right" data-aos-duration="2000">Witamy w CosPlay Café!</h1>
+                <p class="header__text" data-aos="fade-right" data-aos-delay="300" data-aos-duration="2000">Chcesz
+                    poczuć się jak na konwencie?
+                    Zapraszamy do nas!</p>
                 <div class="header__btn-container">
                     <!-- <a href="#menu">
                         <button class="header__btn btn">Zamów online</button></a> -->
-                    <a href="rezerwacje.html"><button class="header__btn btn">Zarezerwuj stolik</button></a>
+                    <a href="rezerwacje.html"><button class="header__btn btn" data-aos="flip-left"
+                            data-aos-duration="2000">Zarezerwuj
+                            stolik</button></a>
                 </div>
             </div>
         </div>
@@ -57,13 +61,15 @@
             <div class="wrapper">
                 <h2 class="section__heading">O nas</h2>
                 <div class="underline"></div>
-                <p class="aboutus__text">Jesteśmy grupą pasjonatów cosplay, od dziecka spędzaliśmy czas w świecie
+                <p class="aboutus__text" data-aos="zoom-in-right">Jesteśmy grupą pasjonatów cosplay,
+                    od dziecka
+                    spędzaliśmy czas w świecie
                     fantastyki, wiemy jak wymagające jest hobby i doskonale rozumiemy potrzeby kogoś kto poświęca swój
                     czas pracując godzinami projektując swój strój na konwenty. Żadne wielkie wydarzenie nie obejdzie
                     się bez dzbanka gorącej kawy lub herbaty a dodatkowo wiemy jak ciężkie są miesiące gdzie nie ma
                     żadnych tego typu wydarzeń dlatego u nas możesz przeżywać ten klimat każdego dnia!</p>
                 <div class="aboutus__items">
-                    <div class="aboutus__container">
+                    <div class="aboutus__container" data-aos="zoom-out-up" data-aos-delay="300">
                         <i class="fa-solid fa-hat-wizard aboutus__icon"></i>
                         <h3 class="aboutus__heading">Kelnerzy cosplayerzy</h3>
                         <p class="aboutus__container-text">Nawet jeśli przyjdziesz w jeansach to my zawsze będziemy w
@@ -71,7 +77,7 @@
                             klimat. Organizujemy także dla was głosowania które będą decydowały o tematyce strojów w
                             których będziemy wam serwować ciepłe napoje!</p>
                     </div>
-                    <div class="aboutus__container">
+                    <div class="aboutus__container" data-aos="zoom-out-up" data-aos-delay="500">
                         <i class="fa-solid fa-utensils aboutus__icon"></i>
                         <h3 class="aboutus__heading">Tematyczne menu</h3>
                         <p class="aboutus__container-text">Nasze menu jest przede wszystkim odpowiedzią na trudy życia
@@ -79,7 +85,7 @@
                             z innymi cosplayerami zmieniamy specjalne menu co 2 tygodnie aby dopasować menu do ciągle
                             zmieniających się światów!.</p>
                     </div>
-                    <div class="aboutus__container">
+                    <div class="aboutus__container" data-aos="zoom-out-up" data-aos-delay="700">
                         <i class="fa-regular fa-calendar aboutus__icon"></i>
                         <h3 class="aboutus__heading">Fantastyczne eventy</h3>
                         <p class="aboutus__container-text">Jako że sam klimat i napoje to dla niektórych trochę za mało
@@ -99,7 +105,8 @@
                 <div class="menu__container">
 
 
-                    <div class="menu__item">
+                    <div class="menu__item" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
                         <div class="menu__item-img-container">
                             <img class="menu__item-img" src="./img/black_coffee.jpg" alt="Filiżanka czarnej kawy">
                         </div>
@@ -108,7 +115,8 @@
                         <p class="menu__item-product">kawa czarna 300ml</p>
                         <p class="menu__item-price">10 PLN</p>
                     </div>
-                    <div class="menu__item">
+                    <div class="menu__item" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
                         <div class="menu__item-img-container">
                             <img class="menu__item-img" src="./img/white_coffe.jpg" alt="Kubek białej kawy">
                         </div>
@@ -117,7 +125,8 @@
                         <p class="menu__item-product">kawa biała 300ml</p>
                         <p class="menu__item-price">10 PLN</p>
                     </div>
-                    <div class="menu__item">
+                    <div class="menu__item" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
                         <div class="menu__item-img-container">
                             <img class="menu__item-img" src="./img/cappuccino.jpg" alt="Filiżanka cappuccino">
                         </div>
@@ -126,7 +135,8 @@
                         <p class="menu__item-product">cappuccino 300ml</p>
                         <p class="menu__item-price">12 PLN</p>
                     </div>
-                    <div class="menu__item">
+                    <div class="menu__item" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
                         <div class="menu__item-img-container">
                             <img class="menu__item-img" src="./img/latte.jpg" alt="Szklanka caffe latte">
                         </div>
@@ -135,7 +145,8 @@
                         <p class="menu__item-product">caffe latte 300ml</p>
                         <p class="menu__item-price">12 PLN</p>
                     </div>
-                    <div class="menu__item">
+                    <div class="menu__item" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
                         <div class="menu__item-img-container">
                             <img class="menu__item-img" src="./img/mocca.jpg" alt="Filiżanka mocci">
                         </div>
@@ -144,7 +155,8 @@
                         <p class="menu__item-product">mocca 300ml</p>
                         <p class="menu__item-price">15 PLN</p>
                     </div>
-                    <div class="menu__item">
+                    <div class="menu__item" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
                         <div class="menu__item-img-container">
                             <img class="menu__item-img" src="./img/kawa_mrożona.jpg" alt="Szklanka mrożonej kawy">
                         </div>
@@ -153,7 +165,8 @@
                         <p class="menu__item-product">kawa mrożona 300ml</p>
                         <p class="menu__item-price">17 PLN</p>
                     </div>
-                    <div class="menu__item">
+                    <div class="menu__item" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
                         <div class="menu__item-img-container">
                             <img class="menu__item-img" src="./img/black_tea.jpg" alt="Kubek czarnej herbaty">
                         </div>
@@ -162,7 +175,8 @@
                         <p class="menu__item-product">herbata czarna 300ml</p>
                         <p class="menu__item-price">8 PLN</p>
                     </div>
-                    <div class="menu__item">
+                    <div class="menu__item" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
                         <div class="menu__item-img-container">
                             <img class="menu__item-img" src="./img/green_tea.jpg" alt="Szklanka zielonej herbaty">
                         </div>
@@ -171,7 +185,8 @@
                         <p class="menu__item-product">herbata zielona 300ml</p>
                         <p class="menu__item-price">10 PLN</p>
                     </div>
-                    <div class="menu__item">
+                    <div class="menu__item" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
                         <div class="menu__item-img-container">
                             <img class="menu__item-img" src="./img/fruit_tea.jpg" alt="Filiżanka owocowej herbaty">
                         </div>
@@ -180,7 +195,8 @@
                         <p class="menu__item-product">herbata owocowa 300ml</p>
                         <p class="menu__item-price">10 PLN</p>
                     </div>
-                    <div class="menu__item">
+                    <div class="menu__item" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
                         <div class="menu__item-img-container">
                             <img class="menu__item-img" src="./img/cheesecake.jpg" alt="Kaweł sernika">
                         </div>
@@ -189,7 +205,8 @@
                         <p class="menu__item-product">sernik 200g</p>
                         <p class="menu__item-price">15 PLN</p>
                     </div>
-                    <div class="menu__item">
+                    <div class="menu__item" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
                         <div class="menu__item-img-container">
                             <img class="menu__item-img" src="./img/brownie.jpg" alt="Kawałki brownie">
                         </div>
@@ -198,7 +215,8 @@
                         <p class="menu__item-product">brownie 100g</p>
                         <p class="menu__item-price">15 PLN</p>
                     </div>
-                    <div class="menu__item">
+                    <div class="menu__item" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
                         <div class="menu__item-img-container">
                             <img class="menu__item-img" src="./img/kremówka.jpg" alt="Kawałek kremówki">
                         </div>
@@ -220,7 +238,7 @@
             <div class="wrapper">
                 <h2 class="section__heading">Wydarzenia</h2>
                 <div class="underline"></div>
-                <div id="carouselExampleCaptions" class="carousel slide d-none d-md-block">
+                <div id="carouselExampleCaptions" class="carousel slide d-none d-md-block" data-aos="zoom-in-right">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
                             class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -231,7 +249,8 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="./img/events_alice.jpg" class="d-block w-100" alt="...">
+                            <img src="./img/events_alice.jpg" class="d-block w-100"
+                                alt="Kobietę siedząca przy stole, przebrana za Szalonego Kapelusznika. W tle można dostrzec kota Cheshire.">
                             <div class="carousel-caption d-none d-md-block">
                                 <h3>Czarodziejskie Spotkanie w Kawiarni</h3>
                                 <p>Weź udział w zaczarowanym wydarzeniu, które przeniesie Cię w świat Alicji w Krainie
@@ -241,7 +260,8 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="./img/events_harry.jpg" class="d-block w-100" alt="...">
+                            <img src="./img/events_harry.jpg" class="d-block w-100"
+                                alt="Osoba trzyma dwie kolby sugerujące mieszanie eliksirów, a także garnek z jakimś wywarem.">
                             <div class="carousel-caption d-none d-md-block">
                                 <h3>Magiczna Noc w Kawiarni Zaklęć</h3>
                                 <p>Odkryj niezwykłe zaklęcia smaku w naszej kawiarni, gdzie magia spotyka się z pysznymi
@@ -252,7 +272,8 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="./img/events_pokemon.jpg" class="d-block w-100" alt="...">
+                            <img src="./img/events_pokemon.jpg" class="d-block w-100"
+                                alt="Stolik na którym znajduje się bukiet kwiatów oraz figurka Pokemona - Eevee.">
                             <div class="carousel-caption d-none d-md-block">
                                 <h3>Pokémonowa Wyprawa: Gotta Catch 'Em All!</h3>
                                 <p>Przyłącz się do naszej Pokémonowej wyprawy w kawiarni, gdzie czeka na Ciebie wieczór
@@ -327,10 +348,11 @@
                 <h2 class="section__heading">Kontakt</h2>
                 <div class="underline"></div>
 
-                <h3 class="contact__heading">Skontaktuj się z nami</h3>
-                <p class="contact__text">Masz do nas pytania czarodzieju? Napisz do nas!</p>
+                <h3 class="contact__heading" data-aos="fade-right" data-aos-duration="2000">Skontaktuj się z nami</h3>
+                <p class="contact__text" data-aos="fade-right" data-aos-duration="2000">Masz do nas pytania czarodzieju?
+                    Napisz do nas!</p>
 
-                <form class="form">
+                <form class="form" data-aos="zoom-in-right">
 
                     <div class="form__top">
                         <div class="form__top-line">
@@ -366,18 +388,21 @@
                 </form>
 
                 <div class="contact__info">
-                    <div class="contact__info-container">
+                    <div class="contact__info-container" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
                         <i class="fa-solid fa-clock contact__info-icon"></i>
                         <h3 class="contact__info-heading">Godziny otwarcia</h3>
                         <p>Jesteśmy otwarci codziennie <br> 12:00 - 23:00 <br> *podczas Pyrkonu 10:00-24:00</p>
                     </div>
-                    <div class="contact__info-container">
+                    <div class="contact__info-container" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000" data-aos-delay="300">
                         <i class="fa-solid fa-envelope contact__info-icon"></i>
                         <h3 class="contact__info-heading">Kontakt</h3>
                         <p>tel.: 696 969 690</p>
                         <p>cosplay.cafe@cosplay.pl</p>
                     </div>
-                    <div class="contact__info-container">
+                    <div class="contact__info-container" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000" data-aos-delay="500">
                         <i class="fa-solid fa-location-dot contact__info-icon"></i>
                         <h3 class="contact__info-heading">Adres</h3>
                         <p>ul. Gołębia 8,</p>
@@ -388,9 +413,12 @@
                 <div class="contact__social-media">
                     <h3 class="contact__social-media-heading">Social media</h3>
                     <div class="contact__social-media-container">
-                        <a href="#"><i class="fa-brands fa-square-facebook contact__social-media-icon"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram contact__social-media-icon"></i></a>
-                        <a href="#"><i class="fa-brands fa-tiktok contact__social-media-icon"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-facebook contact__social-media-icon"
+                                data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="300"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram contact__social-media-icon" data-aos="fade-up"
+                                data-aos-anchor-placement="top-bottom" data-aos-delay="500"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok contact__social-media-icon" data-aos="fade-up"
+                                data-aos-anchor-placement="top-bottom" data-aos-delay="700"></i></a>
                     </div>
                 </div>
             </div>
@@ -408,11 +436,11 @@
 
     </footer>
 
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-
+    <script src="./js/aos.js"></script>
     <script src="./js/main.js"></script>
 
 
