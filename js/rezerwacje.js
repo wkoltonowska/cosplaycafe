@@ -16,6 +16,7 @@ const formInfo = document.querySelector(".form__info");
 const emailInfo = document.querySelector(".form__info-email");
 const phoneInfo = document.querySelector(".form__info-phone");
 const hourInfo = document.querySelector(".form__info-hour");
+const dateInfo = document.querySelector(".form__info-date");
 
 navItems.forEach((item) => {
 	item.addEventListener("click", (event) => {
@@ -104,11 +105,26 @@ const checkHour = (hour) => {
 	}
 };
 
+const checkDate = (date) => {
+	const today = new Date();
+	const inputDate = new Date(date.value);
+	if (inputDate >= today) {
+		dateInfo.textContent = "";
+		checkAll();
+	} else {
+		formInfo.textContent = "";
+		dateInfo.textContent =
+			"Data jest nieprawidłowa.Spróbuj wybrać kolejny dzień.";
+		checkAll();
+	}
+};
+
 const checkAll = () => {
 	if (
 		emailInfo.textContent === "" &&
 		phoneInfo.textContent === "" &&
-		hourInfo.textContent === ""
+		hourInfo.textContent === "" &&
+		dateInfo.textContent === ""
 	) {
 		checkForm([name, surname, mail, phone]);
 	}
@@ -120,11 +136,23 @@ const clearInput = (input) => {
 	});
 };
 
+window.onload = () => {
+	const dateInput = document.getElementById("date");
+	const today = new Date();
+	const year = today.getFullYear();
+	const month = String(today.getMonth() + 1).padStart(2, "0");
+	const day = String(today.getDate()).padStart(2, "0");
+	const todayString = `${year}-${month}-${day}`;
+	dateInput.value = todayString;
+	dateInput.min = todayString;
+};
+
 formBtn.addEventListener("click", (e) => {
 	e.preventDefault();
 	checkMail(mail);
 	checkPhone(phone);
 	checkHour(hour);
+	checkDate(date);
 });
 
 navBars.addEventListener("click", showNav);
