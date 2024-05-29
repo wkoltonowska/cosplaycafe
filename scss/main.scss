@@ -109,6 +109,7 @@ body {
 		padding: 4em 4em 2em;
 		align-items: center;
 		justify-content: center;
+		// transition: transform 0.3s;
 
 		&--active {
 			transform: translateY(0);

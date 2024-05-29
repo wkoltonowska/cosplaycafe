@@ -45,7 +45,11 @@ const currentYear = () => {
 };
 
 currentYear();
-
+const clearInput = (input) => {
+	[name, surname, mail, phone].forEach((item) => {
+		item.value = "";
+	});
+};
 const checkForm = (input) => {
 	let allFilled = true;
 
@@ -56,11 +60,11 @@ const checkForm = (input) => {
 	});
 
 	if (!allFilled) {
+		item.preventDefault();
 		formInfo.textContent = "Wszystkie pola muszą zostać wypełnione";
 	} else {
+		formInfo.textContent = "Dziękujemy za wykonanie rezerwacji!";
 		clearInput();
-		formInfo.textContent =
-			"Dziękujemy za przesłanie formularza! Odpowiedź prześlemy na podany adres e-mail";
 	}
 };
 
@@ -128,12 +132,6 @@ const checkAll = () => {
 	) {
 		checkForm([name, surname, mail, phone]);
 	}
-};
-
-const clearInput = (input) => {
-	[name, surname, mail, phone].forEach((item) => {
-		item.value = "";
-	});
 };
 
 window.onload = () => {
