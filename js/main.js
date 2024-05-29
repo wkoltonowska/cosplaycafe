@@ -57,11 +57,12 @@ const scrollToSection = (selector) => {
 	console.log(targetDivPosition);
 };
 
-const checkForm = (input) => {
+
+const checkForm = (inputs) => {
 	let allFilled = true;
 
-	input.forEach((item) => {
-		if (item.value === "") {
+	inputs.forEach((item) => {
+		if (item.value.trim() === "") {
 			allFilled = false;
 		}
 	});
@@ -69,9 +70,21 @@ const checkForm = (input) => {
 	if (!allFilled) {
 		formInfo.textContent = "Wszystkie pola muszą zostać wypełnione";
 	} else {
-		clearInput();
+		clearInput(inputs);
 		formInfo.textContent =
 			"Dziękujemy za przesłanie formularza! Odpowiedź prześlemy na podany adres e-mail";
+	}
+};
+
+const checkPhone = (phone) => {
+	const re = /^(\+48[- ]?)?(\(?\d{3}\)?[- ]?)?\d{3}[- ]?\d{3}[- ]?\d{3}$/;
+
+	if (re.test(phone.value)) {
+		phoneInfo.textContent = "";
+		return true;
+	} else {
+		phoneInfo.textContent = "Numer telefonu jest niepoprawny";
+		return false;
 	}
 };
 
@@ -81,43 +94,30 @@ const checkMail = (mail) => {
 
 	if (re.test(mail.value)) {
 		emailInfo.textContent = "";
-		checkAll();
+		return true;
 	} else {
-		formInfo.textContent = "";
 		emailInfo.textContent = "E-mail jest niepoprawny";
-		checkAll();
+		return false;
 	}
 };
 
-const checkPhone = (phone) => {
-	const re = /^(\+48[- ]?)?(\(?\d{3}\)?[- ]?)?\d{3}[- ]?\d{3}[- ]?\d{3}$/;
-
-	if (re.test(phone.value)) {
-		phoneInfo.textContent = "";
-		checkAll();
-	} else {
-		formInfo.textContent = "";
-		phoneInfo.textContent = "Numer telefonu jest niepoprawny";
-		checkAll();
-	}
-};
-
-const checkAll = () => {
-	if (emailInfo.textContent === "" && phoneInfo.textContent === "") {
-		checkForm([name, surname, mail, phone, msg]);
-	}
-};
-
-const clearInput = (input) => {
-	[name, surname, mail, phone, msg].forEach((item) => {
+const clearInput = (inputs) => {
+	inputs.forEach((item) => {
 		item.value = "";
 	});
 };
 
 formBtn.addEventListener("click", (e) => {
 	e.preventDefault();
-	checkMail(mail);
-	checkPhone(phone);
+
+	const isPhoneValid = checkPhone(phone);
+	const isMailValid = checkMail(mail);
+
+	if (isPhoneValid && isMailValid) {
+		checkForm([name, surname, mail, phone, msg]);
+	} else {
+		formInfo.textContent = "";
+	}
 });
 
 navBars.addEventListener("click", showNav);

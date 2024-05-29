@@ -54,7 +54,7 @@
             <div class="underline"></div>
 
 
-            <form class="reservations-form form" data-aos="zoom-in-down" data-aos-duration="2000">
+            <!-- <form class="reservations-form form" data-aos="zoom-in-down" data-aos-duration="2000">
 
                 <div class="form__top">
                     <div class="form__top-line form__top-line--reservation">
@@ -112,15 +112,77 @@
 
                 <button class="btn form__btn form__btn--reservation" data-aos="flip-left"
                     data-aos-duration="2000">Wybierz</button>
-            </form>
+            </form> -->
 
+            <form class="reservations-form form" id="reservation-form" data-aos="zoom-in-down" data-aos-duration="2000">
+                <div class="form__top">
+                    <div class="form__top-line form__top-line--reservation">
+                        <label for="name" class="form__label--reservation">Imię</label>
+                        <input type="text" class="input-style" id="name" name="name" required>
+                    </div>
+                    <div class="form__top-line form__top-line--reservation">
+                        <label for="surname" class="form__label--reservation">Nazwisko</label>
+                        <input type="text" class="input-style" id="surname" name="surname" required>
+                    </div>
+                </div>
+                <div class="form__top">
+                    <div class="form__top-line form__top-line--reservation">
+                        <label for="email" class="form__label--reservation">E-mail</label>
+                        <input type="email" id="email" class="input-style" name="email" required>
+                    </div>
+                    <div class="form__top-line form__top-line--reservation">
+                        <label for="phone" class="form__label--reservation">Telefon</label>
+                        <input type="tel" id="phone" class="input-style" name="phone" required maxlength="9">
+                    </div>
+                </div>
+                <div class="form__top">
+                    <div class="form__top-line form__top-line--reservation">
+                        <label for="table_size" class="form__label--reservation">Liczba osób</label>
+                        <select id="table_size" class="input-style" name="table_size" required>
+                            <option value="1">1 osoba</option>
+                            <option value="2">2 osoby</option>
+                            <option value="3">3 osoby</option>
+                            <option value="4">4 osoby</option>
+                            <option value="5">5 osoby</option>
+                        </select>
+                    </div>
+                    <div class="form__top-line form__top-line--reservation">
+                        <label for="table_number" class="form__label--reservation">Wybierz stolik</label>
+                        <select id="table_number" class="input-style" name="table_number" required>
+                            <option value="1">Stolik nr 1</option>
+                            <option value="2">Stolik nr 2</option>
+                            <option value="3">Stolik nr 3</option>
+                            <option value="4">Stolik nr 4</option>
+                            <option value="5">Stolik nr 5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form__top">
+                    <div class="form__top-line form__top-line--reservation">
+                        <label for="hour" class="form__label--reservation">Godzina</label>
+                        <input type="time" id="hour" class="input-style" name="hour" value="12:00" required>
+                    </div>
+                    <div class="form__top-line form__top-line--reservation">
+                        <label for="date" class="form__label--reservation">Data</label>
+                        <input type="date" id="date" class="input-style" name="date" required>
+                    </div>
+                </div>
+                <button class="btn form__btn form__btn--reservation" type="submit" data-aos="flip-left"
+                    data-aos-duration="2000">Wybierz</button>
+            </form>
         </div>
         <div class="form__info-container">
-            <p class="form__info"></p>
+            <!-- <p class="form__info"></p>
             <p class="form__info-email"></p>
             <p class="form__info-phone"></p>
             <p class="form__info-hour"></p>
-            <p class="form__info-date"></p>
+            <p class="form__info-date"></p>-->
+
+            <p id="success-message" class="form__info" style="display:none; color: green;">Stolik został zarezerwowany!
+            </p>
+            <p id="error-message" class="form__info" style="display:none; color: red;">Wystąpił błąd. Spróbuj ponownie.
+            </p>
+        </div>
         </div>
     </section>
 
