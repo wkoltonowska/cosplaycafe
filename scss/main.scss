@@ -18,6 +18,42 @@ body {
 	font-size: 1.6rem;
 }
 
+.arrow {
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	span {
+		display: block;
+		width: 30px;
+		height: 30px;
+		border-bottom: 5px solid $light;
+		border-right: 5px solid $light;
+		transform: rotate(45deg);
+		margin: -10px;
+		animation: scroll 2s infinite;
+		&:nth-child(2) {
+			animation-delay: -0.2s;
+		}
+		&:nth-child(3) {
+			animation-delay: -0.4s;
+		}
+	}
+}
+@keyframes scroll {
+	0% {
+		opacity: 0;
+		transform: rotate(45deg) translate(-20px, -20px);
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: rotate(45deg) translate(20px, 20px);
+	}
+}
+
 .wrapper {
 	margin: 0 auto;
 	width: 100%;
@@ -421,7 +457,7 @@ body {
 
 	&__text {
 		margin: 0;
-		font-size: 2.5rem;
+		font-size: 2rem;
 		color: $light;
 	}
 }
@@ -455,6 +491,11 @@ body {
 			&-img-container {
 				width: 400px;
 			}
+		}
+	}
+	.footer {
+		&__text {
+			font-size: 2.5rem;
 		}
 	}
 }

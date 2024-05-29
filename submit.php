@@ -55,6 +55,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // Zamknij połączenie z bazą danych
 $conn->close();
 
-header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: http://127.0.0.1:5502');
+header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
+header('Access-Control-Allow-Headers: Content-Type, Authorization');
 echo json_encode($response);
 ?>

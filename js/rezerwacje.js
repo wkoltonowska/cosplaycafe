@@ -4,6 +4,7 @@ const navItems = document.querySelectorAll(".js-items");
 const navExit = document.querySelector(".nav__exit");
 const footerYear = document.querySelector(".footer__year");
 let isShowedNav = false;
+const date = document.querySelector("#date");
 
 // const name = document.querySelector("#name");
 // const surname = document.querySelector("#surname");
@@ -154,6 +155,18 @@ const clearInput = (input) => {
 // 	checkDate(date);
 // });
 
+const setTodayDate = () => {
+	const today = new Date();
+	const year = today.getFullYear();
+	const month = String(today.getMonth() + 1).padStart(2, "0");
+	const day = String(today.getDate()).padStart(2, "0");
+
+	const todayDate = `${year}-${month}-${day}`;
+	date.value = todayDate;
+};
+
+window.onload = setTodayDate;
+
 document
 	.getElementById("reservation-form")
 	.addEventListener("submit", function (e) {
@@ -164,7 +177,7 @@ document
 		document.getElementById("success-message").style.display = "none";
 		document.getElementById("error-message").style.display = "none";
 		// Send data using AJAX
-		fetch("submit.php", {
+		fetch("http://localhost:80/api/submit.php", {
 			method: "POST",
 			body: formData,
 		})
