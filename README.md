@@ -19,6 +19,7 @@ CosPlayCafe to projekt strony internetowej dla kawiarni tematycznej, która orga
 - Serwer lokalny: XAMPP
 - Font Awesome - ikony
 - Bootstrap - sekcja wydarzenia
+- AOS (Animate On Scroll) – animacje elementów przy przewijaniu strony
 
 ## Uruchomienie projektu
 
