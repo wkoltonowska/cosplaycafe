@@ -30,7 +30,6 @@
                 <a href="index.html#contact" data-selector="#contact" class="nav__items js-items">Kontakt</a>
             </div>
             <div class="nav_btn-container">
-                <!-- <a href="#cart" class="nav__items"><i class="fa-solid fa-basket-shopping"></i></a> -->
                 <button class="nav__btn"> <i class="fa-solid fa-bars nav__bars "></i></button>
             </div>
 
@@ -44,8 +43,6 @@
                     poczuć się jak na konwencie?
                     Zapraszamy do nas!</p>
                 <div class="header__btn-container">
-                    <!-- <a href="#menu">
-                        <button class="header__btn btn">Zamów online</button></a> -->
                     <a href="rezerwacje.html"><button class="header__btn btn" data-aos="flip-left"
                             data-aos-duration="2000">Zarezerwuj
                             stolik</button></a>
@@ -245,62 +242,71 @@
             <div class="wrapper">
                 <h2 class="section__heading">Wydarzenia</h2>
                 <div class="underline"></div>
-                <div id="carouselExampleCaptions" class="carousel slide d-none d-md-block" data-aos="zoom-in-right">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
+                <div class="carousel__container d-flex justify-content-center">
+                    <div id="carouselExampleCaptions" class="carousel slide d-none d-md-block" data-aos="zoom-in-right">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./img/events_alice.jpg" class="d-block w-100"
+                                    alt="Kobietę siedząca przy stole, przebrana za Szalonego Kapelusznika. W tle można dostrzec kota Cheshire.">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h3>Czarodziejskie Spotkanie w Kawiarni</h3>
+                                    <p>Weź udział w zaczarowanym wydarzeniu, które przeniesie Cię w świat Alicji w
+                                        Krainie
+                                        Czarów! Odkryj tajemnicze smaki herbaty z Szalonym Kapelusznikiem, spróbuj
+                                        naszych
+                                        ciastek w kształcie uśmiechniętych kotów z Cheshire i doświadcz kolorowych
+                                        dekoracji, które przeniosą Cię do magicznego świata Carrolla. </p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/events_harry.jpg" class="d-block w-100"
+                                    alt="Osoba trzyma dwie kolby sugerujące mieszanie eliksirów, a także garnek z jakimś wywarem.">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h3>Magiczna Noc w Kawiarni Zaklęć</h3>
+                                    <p>Odkryj niezwykłe zaklęcia smaku w naszej kawiarni, gdzie magia spotyka się z
+                                        pysznymi
+                                        przekąskami! Przygotuj się na Magiczną Noc w naszym magicznym świecie Harry'ego
+                                        Pottera. Rozkoszuj się kubkiem Gorącego Eliksiru Miłości, spróbuj naszych
+                                        magicznych
+                                        babeczek Smakosza, a może spotkasz swojego własnego Dobby'ego wśród naszych
+                                        przyjaznych baristów!</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/events_pokemon.jpg" class="d-block w-100"
+                                    alt="Stolik na którym znajduje się bukiet kwiatów oraz figurka Pokemona - Eevee.">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h3>Pokémonowa Wyprawa: Gotta Catch 'Em All!</h3>
+                                    <p>Przyłącz się do naszej Pokémonowej wyprawy w kawiarni, gdzie czeka na Ciebie
+                                        wieczór
+                                        pełen przygód w towarzystwie ulubionych Pokémonów! Odkryj smakowe inspiracje z
+                                        różnych regionów, bierz udział w konkursach Pokémon Battle i zgarnij
+                                        fantastyczne
+                                        nagrody! Przygotuj swoją drużynę i dołącz do nas na niezapomnianą przygodę w
+                                        świecie
+                                        Pokémonów!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="./img/events_alice.jpg" class="d-block w-100"
-                                alt="Kobietę siedząca przy stole, przebrana za Szalonego Kapelusznika. W tle można dostrzec kota Cheshire.">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h3>Czarodziejskie Spotkanie w Kawiarni</h3>
-                                <p>Weź udział w zaczarowanym wydarzeniu, które przeniesie Cię w świat Alicji w Krainie
-                                    Czarów! Odkryj tajemnicze smaki herbaty z Szalonym Kapelusznikiem, spróbuj naszych
-                                    ciastek w kształcie uśmiechniętych kotów z Cheshire i doświadcz kolorowych
-                                    dekoracji, które przeniosą Cię do magicznego świata Carrolla. </p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./img/events_harry.jpg" class="d-block w-100"
-                                alt="Osoba trzyma dwie kolby sugerujące mieszanie eliksirów, a także garnek z jakimś wywarem.">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h3>Magiczna Noc w Kawiarni Zaklęć</h3>
-                                <p>Odkryj niezwykłe zaklęcia smaku w naszej kawiarni, gdzie magia spotyka się z pysznymi
-                                    przekąskami! Przygotuj się na Magiczną Noc w naszym magicznym świecie Harry'ego
-                                    Pottera. Rozkoszuj się kubkiem Gorącego Eliksiru Miłości, spróbuj naszych magicznych
-                                    babeczek Smakosza, a może spotkasz swojego własnego Dobby'ego wśród naszych
-                                    przyjaznych baristów!</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./img/events_pokemon.jpg" class="d-block w-100"
-                                alt="Stolik na którym znajduje się bukiet kwiatów oraz figurka Pokemona - Eevee.">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h3>Pokémonowa Wyprawa: Gotta Catch 'Em All!</h3>
-                                <p>Przyłącz się do naszej Pokémonowej wyprawy w kawiarni, gdzie czeka na Ciebie wieczór
-                                    pełen przygód w towarzystwie ulubionych Pokémonów! Odkryj smakowe inspiracje z
-                                    różnych regionów, bierz udział w konkursach Pokémon Battle i zgarnij fantastyczne
-                                    nagrody! Przygotuj swoją drużynę i dołącz do nas na niezapomnianą przygodę w świecie
-                                    Pokémonów!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
 
                 <div class="cards-container d-md-none">

@@ -1,4 +1,40 @@
-@use "./colors" as *;
+@use './colors' as *;
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+.underline {
+	height: 6px;
+	width: 75px;
+	margin: 0.5em 0 2.5em;
+	background-color: $main-color;
+}
+
+.section__heading {
+	font-size: 3rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: $dark;
+}
+
+.btn {
+	padding: 1em;
+	max-width: 275px;
+	color: $light;
+	font-weight: bold;
+	background-color: $main-color;
+	text-transform: uppercase;
+	font-size: 1.8rem;
+	border-radius: 50px;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $dark-violet;
+		color: $light;
+	}
+}
 
 .input-style {
 	padding: 0.6em 1.2em;
